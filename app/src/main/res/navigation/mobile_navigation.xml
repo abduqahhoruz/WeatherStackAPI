@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/current_weather_fragment">
+
+    <fragment
+        android:id="@+id/current_weather_fragment"
+        android:name="com.example.weatherstackapi.ui.home.SettingsFragment"
+        android:label="@string/today"
+        tools:layout="@layout/fragment_current_weather" />
+
+    <fragment
+        android:id="@+id/futureListWeatherFragment"
+        android:name="com.example.weatherstackapi.ui.current.CurrentWeatherFragment"
+        android:label="@string/foraweek"
+        tools:layout="@layout/fragment_future_list" />
+
+    <fragment
+        android:id="@+id/Settings"
+        android:name="com.example.weatherstackapi.ui.future.list.FutureListWeatherFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/futureDetailWeatherFragment"
+        android:name="com.example.weatherstackapi.ui.future.detail.FutureDetailWeatherFragment"
+        android:label="future_detail_weather_fragment"
+        tools:layout="@layout/future_detail_weather_fragment" >
+        <action
+            android:id="@+id/action_futureDetailWeatherFragment_to_futureListWeatherFragment"
+            app:destination="@id/futureListWeatherFragment" />
+    </fragment>
+</navigation>
