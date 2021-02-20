@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.home
+package com.example.weatherstackapi.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.example.weatherstackapi.R
 
 class SettingsFragment : Fragment() {
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
