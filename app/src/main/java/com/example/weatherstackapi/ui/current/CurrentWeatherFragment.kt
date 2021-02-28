@@ -8,9 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.bismillah.data.RetrofitBuilder
 import com.example.weatherstackapi.R
-import com.example.weatherstackapi.ui.data.ApiService
-import com.example.weatherstackapi.ui.data.response.CurrentWeatherResponse
 import kotlinx.android.synthetic.main.fragment_current_weather.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -18,7 +17,6 @@ import kotlinx.coroutines.launch
 
 class CurrentWeatherFragment : Fragment() {
     private lateinit var currentWeatherViewModel: CurrentWeatherViewModel
-private lateinit var currentWeatherResponse: CurrentWeatherResponse
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,14 +34,17 @@ private lateinit var currentWeatherResponse: CurrentWeatherResponse
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val apiService = ApiService()
-        GlobalScope.launch(Dispatchers.Main) {
-            GlobalScope.launch(Dispatchers.IO) {
-                currentWeatherResponse =
-                    apiService.getCurrentWeatherAsync("London", "en").await()
-            }
-            tV_currentFragment.text = currentWeatherResponse.currentWeatherEntry.temperature.toString()
 
+        GlobalScope.launch(Dispatchers.IO) {
+            val currentWeatherResponse = RetrofitBuilder
+                .apiService
+                .getCurrentWeather()
+
+
+            GlobalScope.launch(Dispatchers.Main) {
+                tV_currentFragment.text = currentWeatherResponse.current.toString()
+
+            }
         }
     }
 }

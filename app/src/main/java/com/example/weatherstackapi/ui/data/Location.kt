@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.data.response
+package com.example.bismillah.data
 
 
 import com.google.gson.annotations.SerializedName

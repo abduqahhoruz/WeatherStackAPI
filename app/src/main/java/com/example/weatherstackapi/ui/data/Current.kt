@@ -1,9 +1,9 @@
-package com.example.weatherstackapi.ui.data.response
+package com.example.weatherstackapi.ui.data
 
 
 import com.google.gson.annotations.SerializedName
 
-data class CurrentWeatherEntry(
+data class Current(
     val cloudcover: Int,
     val feelslike: Int,
     val humidity: Int,
