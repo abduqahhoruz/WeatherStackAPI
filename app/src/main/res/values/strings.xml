@@ -3,4 +3,5 @@
     <string name="today">Today</string>
     <string name="foraweek">7 DAYS</string>
     <string name="settings">Settings</string>
+    <string name="current_weather">Current Weather</string>
 </resources>

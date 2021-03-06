@@ -21,7 +21,11 @@
         android:id="@+id/Settings"
         android:name="com.example.weatherstackapi.ui.settings.SettingsFragment"
         android:label="@string/settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_Settings_to_futureListWeatherFragment"
+            app:destination="@id/futureListWeatherFragment" />
+    </fragment>
     <fragment
         android:id="@+id/futureDetailWeatherFragment"
         android:name="com.example.weatherstackapi.ui.future.detail.FutureDetailWeatherFragment"
