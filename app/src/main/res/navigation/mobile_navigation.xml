@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/current_weather_fragment"
-        android:name="com.example.weatherstackapi.ui.current.CurrentWeatherFragment"
+        android:name="com.example.weatherstackapi.ui.ui.current.CurrentWeatherFragment"
         android:label="@string/today"
         tools:layout="@layout/fragment_current_weather" />
 
     <fragment
         android:id="@+id/futureListWeatherFragment"
-        android:name="com.example.weatherstackapi.ui.future.list.FutureListWeatherFragment"
+        android:name="com.example.weatherstackapi.ui.ui.future.list.FutureListWeatherFragment"
         android:label="@string/foraweek"
         tools:layout="@layout/fragment_future_list" />
 
     <fragment
         android:id="@+id/Settings"
-        android:name="com.example.weatherstackapi.ui.settings.SettingsFragment"
+        android:name="com.example.weatherstackapi.ui.ui.settings.SettingsFragment"
         android:label="@string/settings"
         tools:layout="@layout/fragment_settings" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/futureDetailWeatherFragment"
-        android:name="com.example.weatherstackapi.ui.future.detail.FutureDetailWeatherFragment"
+        android:name="com.example.weatherstackapi.ui.ui.future.detail.FutureDetailWeatherFragment"
         android:label="future_detail_weather_fragment"
         tools:layout="@layout/future_detail_weather_fragment" >
         <action

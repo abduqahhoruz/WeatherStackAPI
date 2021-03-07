@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.settings
+package com.example.weatherstackapi.ui.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater

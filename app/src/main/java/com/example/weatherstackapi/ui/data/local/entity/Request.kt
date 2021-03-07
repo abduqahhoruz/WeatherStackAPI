@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.data.db.entity
+package com.example.weatherstackapi.ui.data.local.entity
 
 
 import androidx.room.Entity

@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.future.detail
+package com.example.weatherstackapi.ui.ui.future.detail
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.weatherstackapi.ui.future.list
+package com.example.weatherstackapi.ui.ui.future.list
 
 import android.os.Bundle
 import android.view.LayoutInflater

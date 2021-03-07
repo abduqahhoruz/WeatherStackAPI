@@ -1,10 +1,9 @@
-package com.example.weatherstackapi.ui.data.response
+package com.example.weatherstackapi.ui.data.net.model
 
 
-import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "current_weather")
+
 data class CurrentWeather(
     val cloudcover: Double,
     val feelslike: Double,
@@ -30,5 +29,5 @@ data class CurrentWeather(
     @SerializedName("wind_dir")
     val windDir: String,
     @SerializedName("wind_speed")
-    val windSpeed: Double
+    val windSpeed: Double,
 )

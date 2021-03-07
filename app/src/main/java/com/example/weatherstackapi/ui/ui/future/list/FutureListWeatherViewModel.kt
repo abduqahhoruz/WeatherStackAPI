@@ -1,12 +1,13 @@
-package com.example.weatherstackapi.ui.current
+package com.example.weatherstackapi.ui.ui.future.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CurrentWeatherViewModel : ViewModel() {
+class FutureListWeatherViewModel : ViewModel() {
+
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "This is notifications Fragment"
     }
     val text: LiveData<String> = _text
 }
