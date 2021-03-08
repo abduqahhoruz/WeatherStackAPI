@@ -4,4 +4,5 @@
     <string name="foraweek">7 DAYS</string>
     <string name="settings">Settings</string>
     <string name="current_weather">Current Weather</string>
+    <string name="weather_store">Null</string>
 </resources>

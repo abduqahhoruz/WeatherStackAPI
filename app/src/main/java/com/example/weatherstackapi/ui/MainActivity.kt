@@ -16,7 +16,7 @@ lateinit var navController : NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
         val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
         navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
@@ -29,7 +29,7 @@ lateinit var navController : NavController
             )
         )
         navView.setupWithNavController(navController)
-       toolbar.setupWithNavController(navController,appBarConfiguration)
+       //toolbar.setupWithNavController(navController,appBarConfiguration)
         //According to the UI strict rules I don't have to create
         //Navigation with Action Bar. We all using full screen mode....
 

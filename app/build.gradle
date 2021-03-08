@@ -15,7 +15,8 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        buildConfigField "String", "API_KEY", '"5f3ad969643559e6ccb3bfc8107fdbdd"'
+        buildConfigField "String", "Location", '"New York"'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -52,6 +53,7 @@ dependencies {
     //lifecycle
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0'
 
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'

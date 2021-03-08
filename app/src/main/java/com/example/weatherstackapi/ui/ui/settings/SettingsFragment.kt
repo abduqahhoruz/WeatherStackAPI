@@ -15,4 +15,11 @@ class SettingsFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_settings, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val SHARED_PREFS = "sharedPrefs"
+        val TEXT = "text"
+        var text =""
+        super.onViewCreated(view, savedInstanceState)
+    }
 }
