@@ -25,11 +25,16 @@ class CurrentWeatherFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         return inflater.inflate(R.layout.fragment_current_weather, container, false)
+
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        currentWeatherViewModel.fetchCurrentWeather(BuildConfig.Location)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        fetchData()
+    }
+
+    private fun fetchData() {
+        currentWeatherViewModel.fetchCurrentWeather("Namangan")
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -42,7 +47,6 @@ class CurrentWeatherFragment : Fragment() {
         currentWeatherViewModel.getCurrentWeather().observe(viewLifecycleOwner, { it ->
             when (it.status) {
                 Status.SUCCESS -> {
-                    Log.d(TAG, "setUpObserver: Succes")
                     it.data.let {
                         progressBar_loading.visibility = View.GONE
                         textView_loading.visibility = View.GONE
@@ -68,7 +72,6 @@ class CurrentWeatherFragment : Fragment() {
                         }
 
                     }
-
                 }
                 Status.LOADING -> {
                     Log.d(TAG, "setUpObserver: Loading")

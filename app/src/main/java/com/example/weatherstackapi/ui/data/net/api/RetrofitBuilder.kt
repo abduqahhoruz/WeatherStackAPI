@@ -1,5 +1,6 @@
 package com.example.weatherstackapi.ui.data.net.api
 
+import com.example.weatherstackapi.BuildConfig
 import com.example.weatherstackapi.ui.common.BASE_URL
 import com.example.weatherstackapi.ui.common.KEY_API
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -15,7 +16,7 @@ class RetrofitBuilder {
                 val url = chain.request()
                     .url()
                     .newBuilder()
-                    .addQueryParameter("access_key", KEY_API)
+                    .addQueryParameter("access_key", BuildConfig.API_KEY)
                     .build()
                 val request = chain.request()
                     .newBuilder()
